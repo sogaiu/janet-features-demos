@@ -857,6 +857,45 @@ Janet's FFI capability, perhaps it didn't use to refer to FFI.
 
 I think this refers to Janet's native module capability.
 
+For a smallish example, see `spork`'s [utf8
+module](https://github.com/janet-lang/spork/blob/63f656e6f41b469b484903373187e96616eac837/src/utf8.c),
+and perhaps start by looking at the following code at the bottom of
+the file:
+
+```c
+JANET_MODULE_ENTRY(JanetTable *env) {
+    JanetRegExt cfuns[] = {
+        JANET_REG("decode-rune", cfun_utf8_decode_rune),
+        JANET_REG("encode-rune", cfun_utf8_encode_rune),
+        JANET_REG("prefix->width", cfun_utf8_prefixtowidth),
+        JANET_REG_END
+    };
+    janet_cfuns_ext(env, "utf8", cfuns);
+}
+```
+
+Then take a look at:
+
+```c
+JANET_FN(cfun_utf8_prefixtowidth,
+        "(utf8/prefix->width c)",
+        "Given the first byte in an UTF-8 sequence, get the number of bytes that the codepoint sequence takes up, including the prefix byte.") {
+    janet_fixarity(argc, 1);
+    uint32_t c = (uint32_t)janet_getinteger(argv, 0);
+    int32_t n = ((c & 0xF8) == 0xF0) ? 4 :
+                ((c & 0xF0) == 0xE0) ? 3 :
+                ((c & 0xE0) == 0xC0) ? 2 :
+                                       1;
+    return janet_wrap_integer(n);
+}
+```
+
+Pieces that might be worth investigating further include:
+
+* `janet_fixarity`
+* `janet_getinteger`
+* `janet_wrap_integer`
+
 See the [Writing a Module
 section](https://janet-lang.org/capi/index.html#Writing-a-Module) of
 [The Janet C API docs](https://janet-lang.org/capi/index.html), the
