@@ -819,7 +819,8 @@ repl:6:> (my-name 3)
 ```
 
 Note that unlike Common Lisp, Scheme, or Clojure, Janet uses `~` for
-quasi-quoting / syntax-quoting.
+quasi-quoting / syntax-quoting.  There is a corresponding special form
+named `quasiquote`.
 
 `;` is an abbreviation for using the `splice` special form.
 
@@ -827,7 +828,7 @@ quasi-quoting / syntax-quoting.
 
 See the [Special Forms
 docs](https://janet-lang.org/docs/specials.html) for more details about
-`~` (quasiquote), `;` (splice) , and `,` (unquote).
+`~` (`quasiquote`), `;` (`splice`) , and `,` (`unquote`).
 
 For more info on macros, see the [Macros
 docs](https://janet-lang.org/docs/macros.html).
@@ -1331,7 +1332,7 @@ Some examples of doing this include:
 * The [janet-lang.org website](https://github.com/janet-lang/janet-lang.org/)
 * ahungry's [puny-gui](https://github.com/ahungry/puny-gui/) - a small cross-platform (native) GUI setup (GNU/Linux + Windows)
 * ianthehenry's [bauble](https://github.com/ianthehenry/bauble) - for composing signed distance functions in a high-level language (Janet), compiling them to GLSL, and rendering them via WebGL
-* MikeBeller's [janet-playground](https://github.com/MikeBeller/janet-playground) - A WebAssembly based playground for Janet 
+* MikeBeller's [janet-playground](https://github.com/MikeBeller/janet-playground) - A WebAssembly based playground for Janet
 * s5bug's [sys-script](https://github.com/s5bug/sys-script) - Controlling the Nintendo Switch with Lisp
 * sedpisoad's [super-janet-typist](https://github.com/sepisoad/super-janet-typist/) - a short typing game made with janet lisp
 * [jaylib-wasm-demo](https://github.com/sogaiu/jaylib-wasm-demo) - A demo of using jaylib in a web browser
