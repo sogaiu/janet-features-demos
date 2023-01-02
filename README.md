@@ -867,10 +867,89 @@ details.
 
 ### FFI
 
-See the [gtk
+For a taste, consider the following from the [FFI
+docs](https://janet-lang.org/docs/ffi.html):
+
+```janet
+(ffi/context nil)
+
+(ffi/defbind memcpy :ptr
+  [dest :ptr src :ptr n :size])
+
+(def buffer1 @"aaaa")
+(def buffer2 @"bbbb")
+
+(memcpy buffer1 buffer2 4)
+
+(print buffer1)
+```
+
+First, the path to the dynamic library (note that `nil` means to use
+the current binary) to bind is specified via `ffi/context`:
+
+```
+$ janet
+Janet 1.26.0-dev-a8a78d45 linux/x64 - '(doc)' for help
+repl:1:> (ffi/context nil)
+@{:map-symbols <function default-mangle> :native <core/ffi-native 0x562FB8BAEFE0>}
+```
+
+Use `ffi/defbind` to generate bindings for a native function (in this
+case `memcpy`).  We specify information about the name, return type and
+parameters of the function:
+
+```
+repl:2:> (ffi/defbind memcpy :ptr [dest :ptr src :ptr n :size])
+<function memcpy>
+```
+
+Note that the return value of `ffi/defbind` is a function.  This new
+function will be used shortly.
+
+Now prepare some buffers, `buffer1` as a destination and `buffer2` as a source:
+
+```
+repl:3:> (def buffer1 @"aaaa")
+@"aaaa"
+repl:4:> (def buffer2 @"bbbb")
+@"bbbb"
+```
+
+Note that `buffer1` is initially `@"aaaa"`.
+
+Invoke `memcpy` (the function newly defined by `ffi/defbind` above):
+
+```
+repl:5:> (memcpy buffer1 buffer2 4)
+<pointer 0x562FB8BB22C0>
+```
+
+This should have copied from `buffer2` to `buffer1`.  The return value
+is not interesting in this case so we ignore it.
+
+Now observe the content of `buffer1`:
+
+```
+repl:8:> (print buffer1)
+bbbb
+nil
+```
+
+Note that the original "aaaa" is gone (`nil` is the return value of
+calling `print`).
+
+The content of `buffer` could have been determined as follows too:
+
+```
+repl:9:> buffer1
+@"bbbb"
+```
+
+For a more in-depth example, see the [gtk
 example](https://github.com/janet-lang/janet/blob/a8a78d452506fdbfbf877379eba969e4efbef842/examples/ffi/gtk.janet).
 
-I had to tweak the location of `libgtk-3.so` in `gtk.janet` to be:
+Note, I had to tweak the location of `libgtk-3.so` in `gtk.janet` to
+be:
 
 ```
 /usr/lib/x86_64-linux-gnu/libgtk-3.so
