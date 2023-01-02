@@ -818,6 +818,20 @@ repl:6:> (my-name 3)
 4
 ```
 
+Note that unlike Common Lisp, Scheme, or Clojure, Janet uses `~` for
+quasi-quoting / syntax-quoting.
+
+`;` is an abbreviation for using the `splice` special form.
+
+`,` is an abbreviation for using the `unquote` special form.
+
+See the [Special Forms
+docs](https://janet-lang.org/docs/specials.html) for more details about
+`~` (quasiquote), `;` (splice) , and `,` (unquote).
+
+For more info on macros, see the [Macros
+docs](https://janet-lang.org/docs/macros.html).
+
 ## Tail call optimization
 
 As a placeholder, here is some evidence:
