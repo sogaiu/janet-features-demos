@@ -1452,12 +1452,23 @@ repository](https://github.com/janet-lang/jpm), and the generated
 Some examples of doing this include:
 
 * The [janet-lang.org website](https://github.com/janet-lang/janet-lang.org/)
-* ahungry's [puny-gui](https://github.com/ahungry/puny-gui/) - a small cross-platform (native) GUI setup (GNU/Linux + Windows)
-* ianthehenry's [bauble](https://github.com/ianthehenry/bauble) - for composing signed distance functions in a high-level language (Janet), compiling them to GLSL, and rendering them via WebGL
-* MikeBeller's [janet-playground](https://github.com/MikeBeller/janet-playground) - A WebAssembly based playground for Janet
-* s5bug's [sys-script](https://github.com/s5bug/sys-script) - Controlling the Nintendo Switch with Lisp
-* sedpisoad's [super-janet-typist](https://github.com/sepisoad/super-janet-typist/) - a short typing game made with janet lisp
-* [jaylib-wasm-demo](https://github.com/sogaiu/jaylib-wasm-demo) - A demo of using jaylib in a web browser
+* ahungry's [puny-gui](https://github.com/ahungry/puny-gui/) - a small
+  cross-platform (native) GUI setup (GNU/Linux + Windows)
+* greenfork's [jzignet](https://github.com/greenfork/jzignet) - Zig
+  library to connect Janet and Zig together
+* ianthehenry's [bauble](https://github.com/ianthehenry/bauble) - for
+  composing signed distance functions in a high-level language
+  (Janet), compiling them to GLSL, and rendering them via WebGL
+* MikeBeller's
+  [janet-playground](https://github.com/MikeBeller/janet-playground) -
+  A WebAssembly based playground for Janet
+* s5bug's [sys-script](https://github.com/s5bug/sys-script) -
+  Controlling the Nintendo Switch with Lisp
+* sepisoad's
+  [super-janet-typist](https://github.com/sepisoad/super-janet-typist/) -
+  a short typing game made with janet lisp
+* [jaylib-wasm-demo](https://github.com/sogaiu/jaylib-wasm-demo) - A
+  demo of using jaylib in a web browser
 
 See [The Janet C API docs](https://janet-lang.org/capi/index.html) and
 the [Embedding docs](https://janet-lang.org/capi/embedding.html) for
