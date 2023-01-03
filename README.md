@@ -1091,8 +1091,12 @@ repl:1:> array/push
 After typing "array/push", I entered the sequence Ctrl-G (holding the
 Ctrl key down and pressing and releasing the G key).
 
-Some other key sequences such as Ctrl-A, Ctrl-E, etc. behave in similar
-ways to what one might use in a shell such as bash.
+Some other key sequences such as Ctrl-A, Ctrl-E, etc. behave in
+similar ways to what one might use in a shell such as bash.  The
+janet(1) man page has a longer listing.  I don't know of a nicely
+viewable list of the key sequences on the web, but there's [this bit
+from the main
+repository](https://github.com/janet-lang/janet/blob/a8a78d452506fdbfbf877379eba969e4efbef842/janet.1#L32-L141).
 
 ### Interactive Debugger
 
