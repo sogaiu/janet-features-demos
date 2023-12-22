@@ -8,9 +8,7 @@ should be provided along the way, highly recommended to check them out
 to start the assimila^H^H^H^H^H^H^H^H familiarization process :)
 
 Hint: if reading this on GitHub, consider using the Table of Contents
-icon to navigate to different sections:
-
-![GitHub Table of Contents Icon](github-table-of-contents-icon.png?raw=true "GitHub Table of Contents Icon")
+icon to navigate to different sections.
 
 The intent is to touch on the features listed at the main page.  This
 is a work-in-progress.  Currently the list includes:
