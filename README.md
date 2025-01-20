@@ -1447,13 +1447,17 @@ repository](https://github.com/janet-lang/jpm), and the generated
 
 ## Add to a project with just janet.c and janet.h
 
-Some examples of doing this include:
+Some examples of doing this (or similar) include:
 
 * The [janet-lang.org website](https://github.com/janet-lang/janet-lang.org/)
 * ahungry's [puny-gui](https://github.com/ahungry/puny-gui/) - a small
   cross-platform (native) GUI setup (GNU/Linux + Windows)
+* cfoust's [cy](https://github.com/cfoust/cy) - time travel in the
+  terminal (mostly in go)
 * greenfork's [jzignet](https://github.com/greenfork/jzignet) - Zig
   library to connect Janet and Zig together
+* gwegash's [trane](https://github.com/gwegash/trane) - a lispy
+  livecoding environment
 * ianthehenry's [bauble](https://github.com/ianthehenry/bauble) - for
   composing signed distance functions in a high-level language
   (Janet), compiling them to GLSL, and rendering them via WebGL
@@ -1465,6 +1469,8 @@ Some examples of doing this include:
 * sepisoad's
   [super-janet-typist](https://github.com/sepisoad/super-janet-typist/) -
   a short typing game made with janet lisp
+* zacharycarter's [voodoo](https://github.com/zacharycarter/voodoo) -
+  3D game programming and rapid prototyping library
 * [jaylib-wasm-demo](https://github.com/sogaiu/jaylib-wasm-demo) - A
   demo of using jaylib in a web browser
 
