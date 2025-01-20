@@ -1469,6 +1469,10 @@ Some examples of doing this (or similar) include:
 * sepisoad's
   [super-janet-typist](https://github.com/sepisoad/super-janet-typist/) -
   a short typing game made with janet lisp
+* yumaikas'
+  [janet-peg-playground](https://github.com/yumaikas/janet-peg-playground) -
+  A WebAssembly based playground for Janet's peg/match ([demo
+    site](https://junglecoder.com/playgrounds/PEGs/))
 * zacharycarter's [voodoo](https://github.com/zacharycarter/voodoo) -
   3D game programming and rapid prototyping library
 * [jaylib-wasm-demo](https://github.com/sogaiu/jaylib-wasm-demo) - A
