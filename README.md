@@ -1357,7 +1357,7 @@ article.
 
 For simple examples and docs, follow individual links at [this listing
  of the PEG
- specials](https://github.com/sogaiu/margaret#specials-implementation-status)
+ specials](https://github.com/sogaiu/margaret/blob/master/doc/the-specials.md)
  along with [some extracted real-world
  usage](https://github.com/sogaiu/margaret/tree/master/samples/pegs).
 
