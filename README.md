@@ -1452,6 +1452,9 @@ Some examples of doing this (or similar) include:
 * The [janet-lang.org website](https://github.com/janet-lang/janet-lang.org/)
 * ahungry's [puny-gui](https://github.com/ahungry/puny-gui/) - a small
   cross-platform (native) GUI setup (GNU/Linux + Windows)
+* alect's
+  [camp-wanna-tya-knot](https://git.sr.ht/~alect/camp-wanna-tya-knot)-
+  entry into 2025 GMTK Game Jam - a jaylib-based game for web browsers
 * cfoust's [cy](https://github.com/cfoust/cy) - time travel in the
   terminal (mostly in go)
 * greenfork's [jzignet](https://github.com/greenfork/jzignet) - Zig
